@@ -11,6 +11,28 @@ const DEFAULT_SEED = {
   ]
 };
 
+function makePlaceholderSVG(name){
+  const initials = (name||'').split(/\s+/).map(s=>s[0]||'').join('').slice(0,2).toUpperCase() || '??';
+  const bg = '#0b1220';
+  const fg = '#9ca3af';
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='800' height='400'>`+
+    `<rect width='100%' height='100%' fill='${bg}'/>`+
+    `<text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='96' fill='${fg}'>${initials}</text>`+
+    `</svg>`;
+  return 'data:image/svg+xml;utf8,'+encodeURIComponent(svg);
+}
+
+function setThumb(thumbEl, imgUrl, name){
+  if(!imgUrl){
+    thumbEl.style.backgroundImage = `url(${makePlaceholderSVG(name)})`;
+    return;
+  }
+  const tester = new Image();
+  tester.onload = ()=>{ thumbEl.style.backgroundImage = `url(${imgUrl})`; };
+  tester.onerror = ()=>{ thumbEl.style.backgroundImage = `url(${makePlaceholderSVG(name)})`; };
+  tester.src = imgUrl;
+}
+
 function saveToStorage(data){
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
@@ -47,7 +69,7 @@ function renderCategories(container, data){
       const thumb = document.createElement('div');
       thumb.className = 'thumb';
       const img = site.image || '';
-      thumb.style.backgroundImage = `url(${img})`;
+      setThumb(thumb, img, site.name);
       a.appendChild(thumb);
 
       const controls = document.createElement('div');
