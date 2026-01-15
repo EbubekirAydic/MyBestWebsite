@@ -1,36 +1,10 @@
 {
-  "Game": [
-    {
-      "name": "projectpokemon",
-      "url": "https://projectpokemon.org/home/docs/spriteindex_148/3d-models-generation-1-pok%C3%A9mon-r90/",
-      "image": "projectpokemon.png",
-      "description": "Pokémon 3D modelleri ve sprite kaynakları"
-    }
-  ],
   "Image": [
     {
       "name": "ezgif",
       "url": "https://ezgif.com/split?err=expired",
       "image": "ezgifWallpaper.png",
-      "description": "GIF düzenleme ve bölme aracı, GIF dosyalarını kesmek veya kareleri ayırmak"
-    },
-    {
-        "name": "removebg",
-        "url": "https://www.remove.bg/upload",
-        "image": "removebgWallpaper.png",
-        "description": "Arka plan silmek"
-    },
-    {
-        "name": "iloveimg",
-        "url": "https://www.iloveimg.com/",
-        "image": "iloveimg.png",
-        "description": "Arka plan silmek"
-    },
-    {
-        "name": "webtyler",
-        "url": "https://wareya.github.io/webtyler/",
-        "image": "iloveimgWallpaper.png",
-        "description": "Çevrimiçi MP3 kırpma ve ses düzenleme — basit kesme/ayırma işlemleri için pratik."
+      "description": "Hızlı GIF düzenleme ve bölme aracı — küçük GIF dosyalarını kesmek veya kareleri ayırmak için kullanıyorum."
     }
   ],
   "Audio": [
@@ -40,33 +14,5 @@
       "image": "mp3cutWallpaper.png",
       "description": "Çevrimiçi MP3 kırpma ve ses düzenleme — basit kesme/ayırma işlemleri için pratik."
     }
-  ],
-  "Yazılımsal Araçlar": [
-    {
-      "name": "recaptcha",
-      "url": "https://www.google.com/recaptcha/admin/site/738656631/setup",
-      "image": "recaptcha.png",
-      "description": "recaptcha v3 anahtar oluşturma"
-    },
-    {
-      "name": "jsonformatter",
-      "url": "https://jsonformatter.org/json-pretty-print",
-      "image": "jsonformatter.png",
-      "description": "JSON verilerini biçimlendirme ve okunabilir hale getirme aracı"
-    },
-    {
-      "name": "cloudinary",
-      "url": "https://cloudinary.com/users/login?RelayState=/app/c-8856e8947ffcb791e477f358ae1225/assets/media_library/search",
-      "image": "cloudinary.png",
-      "description": "Bulut tabanlı medya yönetimi ve optimizasyon platformu"
-    }
-  ],
-  "Sözlük": [
-        {
-        "name": "Eş Anlamlılısı",
-        "url": "https://esanlamlisi.net/es-anlamli/ulasmak/",
-        "image": "esanlamlisi.png",
-        "description": "Türkçe eş anlamlı kelimeler sözlüğü"
-        }
   ]
 }

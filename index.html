@@ -10,10 +10,39 @@
   <header class="site-header">
     <h1>Favori Siteler</h1>
     <p class="subtitle">Kategorilere göre düzenlenmiş, `sites.json`'den yüklenen listem</p>
+    <div class="toolbar">
+      <button id="toggleAdd" class="btn">Yeni Site Ekle</button>
+      <button id="downloadBtn" class="btn">JSON İndir</button>
+      <button id="copyBtn" class="btn">JSON Kopyala</button>
+      <label class="uploadLabel">JSON Yükle
+        <input id="uploadJson" type="file" accept="application/json" />
+      </label>
+      <div class="importMode">
+        <label><input type="radio" name="importMode" value="overwrite" checked /> Üstüne yaz</label>
+        <label><input type="radio" name="importMode" value="append" /> Ekle</label>
+      </div>
+    </div>
   </header>
 
   <main id="app" class="container">
     <div id="loading" class="loading">Yükleniyor…</div>
+
+    <div id="formContainer" class="form-container hidden">
+      <form id="siteForm">
+        <h3 id="formTitle">Yeni Site Ekle</h3>
+        <input type="hidden" id="editCategory" />
+        <input type="hidden" id="editIndex" />
+        <label>Kategori <input id="siteCategory" required /></label>
+        <label>İsim <input id="siteName" required /></label>
+        <label>URL <input id="siteUrl" type="url" required placeholder="https://..."/></label>
+        <label>Resim (URL veya dosya adı) <input id="siteImage" /></label>
+        <label>Açıklama <textarea id="siteDescription" rows="2"></textarea></label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Kaydet</button>
+          <button type="button" id="cancelForm" class="btn">İptal</button>
+        </div>
+      </form>
+    </div>
   </main>
 
   <script src="app.js" defer></script>
